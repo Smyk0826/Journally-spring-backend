@@ -28,6 +28,7 @@ public class notesController {
     @PostMapping("/notes")
     public String addNote(@RequestBody Note entity) {
         //TODO: process POST request
+        System.out.println("request called for note: "+entity);
         noteService.addNote(entity);
         return "Successfully posted Note";
     }

@@ -4,7 +4,7 @@ function ListItem(props){
     return(
         <div className="NotesItem">
             <h2>{props.date}</h2>
-            <h3>{props.title}</h3>
+            <h3 >{props.title}</h3>
         </div>
     );
 }

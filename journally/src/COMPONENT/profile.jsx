@@ -3,10 +3,10 @@ import Title from "./Title";
 import ListItem from "./NotesList/NotesItem";
 import Note_book from "./buttons/notebook";
 import LogOut from "./buttons/logout";
-import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { nameContext } from "../context/context";
 import { idContext } from "../context/context";
+import { Link } from "react-router-dom";
 
 function Profile_page(){
     const value = useContext(nameContext);
@@ -37,7 +37,7 @@ return(
             <Title/>
             </div>
             <div className="buttonBox">
-                <Note_book/> 
+                 <Link to="/notebook"> <Note_book/> </Link>
                 <LogOut/>
             </div>
         

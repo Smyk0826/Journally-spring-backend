@@ -17,7 +17,7 @@ function Notebook(){
         e.preventDefault();
              axios.post('http://localhost:8080/notes',{
                 "data" : noteData,
-                "date" :fullDate,
+                "date" :date.toISOString(),
                 "userId" : userId.id
             }).then(response => {
                 console.log('Status Code:', response.status); // ✅ status code like 200 or 201

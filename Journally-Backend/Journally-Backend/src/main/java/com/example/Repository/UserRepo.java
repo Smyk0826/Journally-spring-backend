@@ -11,6 +11,7 @@ import com.example.model.User;
 
 @Repository
 public interface UserRepo extends JpaRepository<User, Integer>{
+    
     User getUserByEmail(String email);
 
     @Query(value = "select u.email from User u where u.userId not in :activeUsers")

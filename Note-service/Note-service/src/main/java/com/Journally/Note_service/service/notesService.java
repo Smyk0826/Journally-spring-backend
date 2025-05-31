@@ -1,10 +1,12 @@
-package com.example.Journally_Backend.service;
+package com.Journally.Note_service.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.model.Note;
+
+import com.Journally.Note_service.Repository.notesRepo;
+import com.Journally.Note_service.model.Note;
+
 import java.util.List;
-import com.example.Repository.notesRepo;
 
 @Service
 public class notesService {
@@ -17,6 +19,9 @@ public class notesService {
         // TODO Auto-generated method stub
         noteRepo.save(entity);
         return;
+    }
+    public List<Integer> getActiveUsers() {
+        return noteRepo.getActiveUsers();
     }
 
 

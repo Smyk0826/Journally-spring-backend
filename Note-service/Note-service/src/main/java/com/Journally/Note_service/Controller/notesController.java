@@ -1,13 +1,15 @@
-package com.example.Journally_Backend.Controller;
+package com.Journally.Note_service.Controller;
 
 
 import org.springframework.web.bind.annotation.RestController;
-import com.example.Journally_Backend.service.notesService;
+
+import com.Journally.Note_service.model.Note;
+import com.Journally.Note_service.service.notesService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.example.model.Note;
 import java.util.List;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,5 +34,11 @@ public class notesController {
         noteService.addNote(entity);
         return "Successfully posted Note";
     }
+
+    @GetMapping("/activeUsers")
+    public List<Integer> getActiveUsers() {
+        return noteService.getActiveUsers();
+    }
+    
     
 }

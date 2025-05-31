@@ -3,6 +3,7 @@ package com.example.Journally_Backend.Controller;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.Journally_Backend.service.UserService;
 import com.example.model.User;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class UserController {
     @Autowired
     UserService userService;
+
    
     @GetMapping("/hello")
     public String greet(){
@@ -32,6 +34,14 @@ public class UserController {
         System.out.println("request called for user: "+user);
         userService.addUser(user);       
         return "Successfull";
+    }
+
+    @GetMapping("/unActiveUsers")
+    public List<String> getUnActiveUsers(){
+        
+        List<String> emails = userService.getUnActiveUsers();
+        System.out.println("emails : "+emails.toString());
+        return emails;
     }
     
 }

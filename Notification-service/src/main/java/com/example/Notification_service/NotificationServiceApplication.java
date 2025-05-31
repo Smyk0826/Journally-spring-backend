@@ -1,4 +1,4 @@
-package com.example;
+package com.example.Notification_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,11 +6,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients
-public class JournallyBackendApplication {
+public class NotificationServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JournallyBackendApplication.class, args);
-		System.out.println("Hello World!");
+		SpringApplication.run(NotificationServiceApplication.class, args);
 	}
 
 }

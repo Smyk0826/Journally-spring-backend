@@ -16,7 +16,7 @@ const handleSubmit = async (e) => {
     e.preventDefault();
     try {
         //console.log(response);
-        const response = await axios.get('http://localhost:8080/users?email='+loginID);
+        const response = await axios.get('http://localhost:8081/users?email='+loginID);
         console.log('response is : ',response);
         const userName = response.data.userName;
         console.log('username is : ',userName);

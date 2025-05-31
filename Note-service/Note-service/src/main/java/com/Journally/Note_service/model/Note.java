@@ -1,4 +1,6 @@
-package com.example.model;
+package com.Journally.Note_service.model;
+
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,4 +24,8 @@ public class Note {
     String data;
     String date;
     int userId;
+    public static List<Note> getNoteByUserId(int userId2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getNoteByUserId'");
+    }
 }

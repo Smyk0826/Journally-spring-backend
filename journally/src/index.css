@@ -121,3 +121,35 @@ body{
   margin: 0%;
   padding: 0px;
 }
+.Greetings{
+  margin-top:2%;
+  color: rgb(255, 255, 255);
+}
+.card {
+  border: 1px solid #ccc;
+  color: rgb(227, 227, 174);
+   background-color: #1b12016f;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.184);
+  cursor:text;
+  transition: all 0.9s ease-in-out;
+}
+
+.card.expanded {
+  background-color: #3223013f;
+}
+
+.card button {
+  position:relative;
+  margin-left:40%;
+  margin-right: 40%;
+  width: 200px;
+  margin-top: 10px;
+  background-color: #93570493;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}

@@ -57,7 +57,7 @@ return(
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your name" value={username} onChange={(e) => setUsername(e.target.value)}/>
             </div>
             <div className="form-group">
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input type="email" class="TextArea form-control" id="exampleFormControlInput1" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className="form-group">
                 <input type="password" class="TextArea form-control" id="exampleFormControlInput1" placeholder="Password"  value={password}  onChange={(e) => setPassword(e.target.value)}/>

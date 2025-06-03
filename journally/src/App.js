@@ -6,6 +6,7 @@ import Profile from './COMPONENT/profile';
 import Notebook from './COMPONENT/notebook';
 import Home from './COMPONENT/home';
 import SignIn from './COMPONENT/signin';
+import ProtectedRoute from './ProtectedRoute';
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,7 +19,7 @@ import { nameContext,idContext } from './context/context';
 
 function App() {
   const [name, setName] = useState('');
-  const [id, setId] = useState('');
+  const [id, setId] = useState(-1);
 
   useEffect(() => {
     fetch('http://localhost:8080/hello')
@@ -36,8 +37,12 @@ function App() {
         <Route exact path="/" element={<Home/>}/>
         <Route exact path="/Login" element={<Login/>}/>
         <Route exact path="/signin" element={<SignIn/>}/>
-        <Route exact path="/notebook" element={<Notebook/>}/>
-        <Route exact path="/profile" element={<Profile/>}/>
+       <Route exact path="/notebook" element={  <ProtectedRoute
+                children={<Notebook />}
+              />}/>
+        <Route exact path="/profile" element={<ProtectedRoute
+                children={<Profile />}
+              />}/>
         </Routes>
     </div>
     </Router>

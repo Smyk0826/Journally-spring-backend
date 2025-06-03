@@ -46,7 +46,7 @@ return(
 
             {notes.map((note,index)=>(
               <div className="NoteListContainer">
-                <ListItem date = {note.date.substring(0, 10)} title ={note.data.length > 25 ? note.data.substring(0,25)+'...':note.data}></ListItem>
+                <ListItem date = {note.date.substring(0, 10)} data ={note.data}></ListItem>
               </div>
             ))
           }

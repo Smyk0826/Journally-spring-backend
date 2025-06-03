@@ -4,8 +4,10 @@ import LogOut from "./buttons/logout";
 import axios from "axios";
 import { idContext } from "../context/context";
 import Popup from "./popup";
+import { useNavigate } from "react-router-dom";
 
 function Notebook(){
+    const navigate = useNavigate();
    const date = new Date();
    const userId = useContext(idContext);
    console.log(userId);
@@ -20,13 +22,14 @@ function Notebook(){
                 "date" :date.toISOString(),
                 "userId" : userId.id
             }).then(response => {
-                console.log('Status Code:', response.status); // ✅ status code like 200 or 201
-                console.log('Response Data:', response.data);
+                
                 if(response.status === 200){
                  seterrMess('Submitted successfully');
                 setpopupTrigger(true);
+                 setTimeout(() => {
+                     navigate('/profile');
+                }, 2000);
             }
-
             })
             .catch(error => {
                 if (error.response) {

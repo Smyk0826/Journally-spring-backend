@@ -21,9 +21,8 @@ Your personal, private digital journal — beautifully designed and built for pe
 
 | Frontend | Backend  | Database | Deployment |
 |----------|----------|----------|------------|
-| React    | Spring Boot | MySql | Render / Vercel / Netlify |
-                +
-            Microservices
+| React    | Spring Boot + Microservices | MySql | Render / Vercel / Netlify |
+          
 
 ---
 
